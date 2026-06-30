@@ -1,1 +1,6 @@
-/bin/*
+bin/*
+CMakeCache.txt
+Makefile
+CMakeFiles/*
+build/*
+compile_commands.json

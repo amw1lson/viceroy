@@ -1,0 +1,39 @@
+CompileFlags:
+  CompilationDatabase: build
+  Add:
+    - -std=c++23
+    - -Wall
+    - -Wextra
+    - -Wpedantic
+    - -Werror
+    - -Wshadow
+    - -Wconversion
+    - -Wsign-conversion
+    - -Wnull-dereference
+    - -Wdouble-promotion
+    - -Wformat=2
+  Remove:
+    - -fno-exceptions
+    - -fno-rtti
+Diagnostics:
+  Suppress: []
+  ClangTidy:
+    FastCheckFilter: None
+    UnusedChecks: false
+    WarningsAsErrors: '*'
+    Add:
+      - readability-*
+      - modernize-*
+      - performance-*
+      - bugprone-*
+      - misc-*
+      - hicpp-*
+    Remove:
+      - readability-magic-numbers
+      - modernize-use-trailing-return-type
+    CheckOptions:
+      readability-function-size.LineThreshold: 120
+      readability-function-size.BranchThreshold: 10
+Index:
+  Background: true
+  StandardLibrary: true
